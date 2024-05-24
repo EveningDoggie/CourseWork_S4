@@ -1,0 +1,18 @@
+﻿  Ex7.cpp
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex7\Expression.h(16,3): warning C4091: 'typedef ': ignored on left of 'Expression::variable' when no variable is declared
+  (compiling source file 'Ex7.cpp')
+  
+  Expression.cpp
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex7\Expression.h(16,3): warning C4091: 'typedef ': ignored on left of 'Expression::variable' when no variable is declared
+  (compiling source file 'Expression.cpp')
+  
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex7\Expression.cpp(79,34): warning C4101: 'e': unreferenced local variable
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex7\Expression.cpp(173,33): warning C4101: 'e': unreferenced local variable
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex7\Expression.cpp(187,31): warning C4101: 'e': unreferenced local variable
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex7\Expression.cpp(247,14): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex7\Expression.cpp(260,32): warning C4101: 'e': unreferenced local variable
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex7\Expression.cpp(274,32): warning C4101: 'ex': unreferenced local variable
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex7\Expression.cpp(338,32): warning C4101: 'e': unreferenced local variable
+  Generating Code...
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex7\Expression.cpp(276,1): warning C4715: 'Expression::calculateOperand': not all control paths return a value
+  Ex7.vcxproj -> C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\x64\Debug\Ex7.exe

@@ -1,0 +1,12 @@
+FirstName LastName ParentName
+{
+Contract N1 beg. 01/01/2018 con. 03/02/2018 Work 123 Cost 12500;
+Contract N12 beg. 04/18/2019 con. 06/20/2019 Work 1234 Cost 1550;
+Contract N14 beg. 05/19/2019 con. nv Work 1235 Cost 17500;
+}
+FirstName2 LastName ParentName
+{
+Contract N1 beg. 01/01/2018 con. 03/02/2018 Work 123 Cost 12500;
+Contract N12 beg. 04/18/2019 con. 06/20/2019 Work 1234 Cost 1550;
+Contract N14 beg. 05/19/2019 con. nv Work 1235 Cost 18500;
+}

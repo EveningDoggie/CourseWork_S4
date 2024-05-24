@@ -1,0 +1,7 @@
+﻿  Messages.cpp
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex12\Messages.h(35,3): warning C4091: 'typedef ': ignored on left of 'Messages::message' when no variable is declared
+  (compiling source file 'Messages.cpp')
+  
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex12\Messages.cpp(174,13): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex12\Messages.cpp(226,13): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Ex12.vcxproj -> C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\x64\Debug\Ex12.exe

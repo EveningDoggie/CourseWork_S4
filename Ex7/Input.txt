@@ -1,0 +1,14 @@
+myvar=15;
+ccc=myvar/3;
+{
+bg=25;
+ccc=bg+myvar;
+{
+param=0;
+param=ccc/bg+15;
+print param;
+}
+print ccc;
+}
+bg=ccc*myvar;
+print;
