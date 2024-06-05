@@ -3,6 +3,7 @@
 #include <fstream>
 #include <map>
 #include <iostream>
+#include <algorithm>
 
 class Arrays
 {

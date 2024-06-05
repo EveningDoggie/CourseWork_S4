@@ -8,7 +8,7 @@ int main()
 {
     try
     {
-        Expression::execute("C:\\Users\\lifem\\iCloudDrive\\Documents\\Учеба\\Языки и методы\\Курсовая работа\\CourseWork\\Ex8\\Input.txt", 2000);
+        Expression::execute("C:\\Users\\lifem\\iCloudDrive\\Documents\\Учеба\\Языки и методы\\Курсовая работа\\CourseWork_S4\\Ex8\\Input.txt", 2000);
     }
     catch (std::exception e)
     {

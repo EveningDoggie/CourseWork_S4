@@ -46,7 +46,7 @@ Words::~Words()
     }
 }
 
-void Words::saveDictionary(std::string pathToDictionary)
+void Words::saveDictionary(std::string & pathToDictionary)
 {
     std::ofstream outFile(pathToDictionary);
 
@@ -63,10 +63,10 @@ void Words::saveDictionary(std::string pathToDictionary)
     outFile.close();
 }
 
-void Words::saveToDeque(std::string* path, std::vector<std::string>* vector)
+void Words::saveToDeque(std::string & path, std::vector<std::string>* vector)
 {
     auto *pair = new std::pair<std::string, std::vector<std::string>>();
-    pair->first = *path;
+    pair->first = path;
     pair->second = *vector;
     undodeque.push_back(pair);
 
@@ -159,7 +159,7 @@ void Words::wordsReplace(std::string path, TypeOfReplacement type)
 
     outFile.close();
 
-    saveToDeque(&path, &originalWords);
+    saveToDeque(path, &originalWords);
 }
 
 
@@ -171,7 +171,7 @@ void Words::printDictionary()
     }
 }
 
-std::string Words::addValueToDictionary(std::string word)
+std::string Words::addValueToDictionary(std::string& word)
 {
 
     std::map<std::string, std::string>::iterator It = words.find(word);

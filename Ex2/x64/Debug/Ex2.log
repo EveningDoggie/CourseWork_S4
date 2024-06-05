@@ -1,3 +1,11 @@
-﻿  Ex2.cpp
-C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex2\Ex2.cpp(11,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Ex2.vcxproj -> C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\x64\Debug\Ex2.exe
+﻿  Arrays.cpp
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork_S4\Ex2\Arrays.cpp(102,51): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork_S4\Ex2\Arrays.cpp(189,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork_S4\Ex2\Arrays.cpp(217,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork_S4\Ex2\Arrays.cpp(234,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork_S4\Ex2\Arrays.cpp(296,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork_S4\Ex2\Arrays.cpp(297,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork_S4\Ex2\Arrays.cpp(352,9): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork_S4\Ex2\Arrays.cpp(352,34): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork_S4\Ex2\Arrays.cpp(483,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Ex2.vcxproj -> C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork_S4\x64\Debug\Ex2.exe

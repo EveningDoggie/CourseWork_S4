@@ -2,7 +2,7 @@
 #include "Work.h"
 int main()
 {
-	std::string path = "C:\\Users\\lifem\\iCloudDrive\\Documents\\Учеба\\Языки и методы\\Курсовая работа\\CourseWork\\Ex5\\Input.txt";
+	std::string path = "C:\\Users\\lifem\\iCloudDrive\\Documents\\Учеба\\Языки и методы\\Курсовая работа\\CourseWork_S4\\Ex5\\Input.txt";
 	auto data = Work::Load(path);
 
 	auto deal = Work::getDearestDeal("FirstName LastName ParentName", &data);

@@ -15,7 +15,7 @@ void Expression::execute(std::string commands)
 
 		if (line.find("(") > 0 && line.find("):") != std::string::npos)
 		{
-			appendMethodsFromString(line);
+			appendMethodsFromString(&line);
 			continue;
 		}
 
@@ -23,7 +23,7 @@ void Expression::execute(std::string commands)
 		{
 			try
 			{
-				appendVariablesFromString(line);
+				appendVariablesFromString(&line);
 			}
 			catch (std::exception e)
 			{
@@ -35,7 +35,7 @@ void Expression::execute(std::string commands)
 		if (line.find('=') != std::string::npos)
 		{
 			std::string name, cmd;
-			getAssignmentExpressionFromString(line, &name, &cmd);
+			getAssignmentExpressionFromString(&line, &name, &cmd);
 			try
 			{
 				variables[name] = calculateExpression(cmd);
@@ -64,13 +64,13 @@ void Expression::execute(std::string commands)
 }
 
 
-void Expression::appendVariablesFromString(std::string line)
+void Expression::appendVariablesFromString(std::string const * line)
 {
 	std::stringstream ss;
 	std::string name;
 	bool recorded = false;
 
-	for (auto c : line)
+	for (auto c : *line)
 	{
 
 		if (!recorded && c == '(')
@@ -103,14 +103,14 @@ void Expression::appendVariablesFromString(std::string line)
 	}
 }
 
-void Expression::appendMethodsFromString(std::string line)
+void Expression::appendMethodsFromString(std::string const *line)
 {
 	std::stringstream ss;
 	std::string name;
 	bool variablesRecordMode = false;
 	bool recorded = false;
 
-	for (auto c : line)
+	for (auto c : *line)
 	{
 
 		if (!recorded && c == '(')
@@ -151,12 +151,12 @@ void Expression::appendMethodsFromString(std::string line)
 }
 
 
-void Expression::getAssignmentExpressionFromString(std::string line, std::string* name, std::string* calc)
+void Expression::getAssignmentExpressionFromString(std::string const *line, std::string* name, std::string* calc)
 {
 	std::stringstream ss;
 	bool recorded = false;
 
-	for (auto c : line)
+	for (auto c : *line)
 	{
 		if (!recorded && c == '=')
 		{
@@ -317,14 +317,35 @@ float Expression::calculateOperand(std::string cmd)
 	//скобки не по краям и по операндам не разбилось, значит что-то стоит вплотную к скобкам
 	//значит маска такая:  afewsymbols(...). А это маска функции.
 	//считываем функцию и отправляем на вычисление
-	std::stringstream ss;
+	//
+	//Обрабатываем неверную маску функции afewsymbols(...)asd или (...)asd
+	if (cmd[cmd.size() - 1] != ')') throw std::logic_error("Incorrect expression");
+
 	std::string name;
 	std::vector<std::string> replacement;
+	getFunctionData(&cmd, &name, &replacement);
 
+	std::string res;
+	try
+	{   //подмена переменных
+		res = getMethodReplacement(&name, &replacement);
+	}
+	catch (const std::exception& e) { throw; }
+
+	try
+	{   //вычисление результирующего выражения после подмены
+		return calculateExpression(res);
+	}
+	catch (const std::exception& ex) { throw; }
+}
+
+void Expression::getFunctionData(std::string const * cmd, std::string* name, std::vector<std::string>* replacement)
+{
+	std::stringstream ss;
 	bool isNameRecorded = false;
 	size_t depth = 0;
 
-	for (auto c : cmd)
+	for (auto c : *cmd)
 	{
 		if (c == ')') --depth;
 		if (c == '(')
@@ -333,7 +354,7 @@ float Expression::calculateOperand(std::string cmd)
 			if (isNameRecorded == false)
 			{
 				isNameRecorded = true;
-				name = ss.str();
+				*name = ss.str();
 				ss.str("");
 				continue;
 			}
@@ -345,7 +366,7 @@ float Expression::calculateOperand(std::string cmd)
 			{
 				//нашли переменную. отправим в рекусию на предварительное получение результата
 				//например: func(ab+bc, 4). Сначала вычислится ab+bc. затем уже произойдет отправка в функцию.
-				replacement.push_back(std::to_string(calculateExpression(ss.str())));
+				replacement->push_back(std::to_string(calculateExpression(ss.str())));
 			}
 			catch (const std::exception& ex) { throw; }
 			ss.str("");
@@ -354,23 +375,7 @@ float Expression::calculateOperand(std::string cmd)
 
 		ss << c;
 	}
-
-	std::string res;
-	try
-	{
-		//подмена переменных
-		res = getMethodReplacement(&name, &replacement);
-	}
-	catch (const std::exception& e) { throw; }
-
-	try
-	{
-		//вычисление результирующего выражения после подмены
-		return calculateExpression(res);
-	}
-	catch (const std::exception& ex) { throw; }
 }
-
 
 
 std::string Expression::getMethodReplacement(std::string* name, std::vector<std::string>* replacement)

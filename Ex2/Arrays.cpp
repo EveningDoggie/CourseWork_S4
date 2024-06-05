@@ -1,5 +1,6 @@
 ﻿#include "Arrays.h"
 #include <iostream>
+#include <vector>
 using namespace std;
 
 size_t Arrays::GetSize(int* A)
@@ -38,6 +39,7 @@ void Arrays::Load(int **A, std::string path)
 
 	fin.open(path);
 	if (!fin.is_open()) throw logic_error("File is not open");
+
 	int count = 0;
 	for (int i = 0; i < size; ++i)
 	{
@@ -48,9 +50,10 @@ void Arrays::Load(int **A, std::string path)
 		}
 		catch (exception e)
 		{
-			throw e;
+			throw;
 		}
 	}
+
 	fin.close();
 }
 
@@ -146,12 +149,15 @@ void Arrays::Save(int* A, std::string path)
 
 	 try
 	 {
-		 delete* A;
-		 *A = new int[0];
+		 if (Arrays::GetSize(*A) != 0)
+		 {
+			 delete *A;
+			 *A = new int[0];
+		 }
 	 }
 	 catch (exception e)
 	 {
-		 throw e;
+		 throw;
 	 }
  
  }
@@ -339,56 +345,50 @@ void Arrays::Save(int* A, std::string path)
 		 throw logic_error("Null ptr exception");
 	 }
 
-	 int* arr;
-	 int sizea = GetSize(*A);
-	 int sizeb = GetSize(B);
-
-	 int count = 0;
-	 map <int, size_t> values;
-	 for (int j = 0; j < sizea; ++j)
-	 {
-		 values[(*A)[j]] = 1;
-	 }
-
-	 for (int j = 0; j < sizeb; ++j)
-	 {
-		 if (values.count(B[j]) != 0)
-		 {
-			 if (values[B[j]] != 0)
-			 {
-				 values[B[j]] = 2;
-				 --count;
-			 }
+	 std::vector<int> v;
+	 Arrays::Sort(A, true);
+	 Arrays::Sort(&B, true);
+	 int i = 0, j = 0;
+	 int n = Arrays::GetSize(*A), m = Arrays::GetSize(B);
+	 while (i < n && j < m) {
+		 if ((*A)[i] < B[j]) {
+			 v.push_back((*A)[i]);
+			 i++;
 		 }
-		 else
-		 {
-			 values[B[j]] = 0;
+		 else if (B[j] < (*A)[i]) {
+			 v.push_back(B[j]);
+			 j++;
+		 }
+
+		 else {
+			 i++;
+			 j++;
 		 }
 	 }
+	 while (i < n) {
+		 v.push_back((*A)[i]);
+		 i++;
+	 }
+	 while (j < m) {
+		 v.push_back(B[j]);
+		 j++;
+	 }
 
-	 count += values.size();
 	 try
 	 {
-		 arr = new int[count];
+		 delete* A;
+		 *A = new int[v.size()];
 	 }
 	 catch (exception e)
 	 {
 		 throw e;
 	 }
 
-	 count = -1;
-	 for (auto v : values)
+	 int ptrindex = -1;
+	 for (auto val: v)
 	 {
-		 if (v.second<2)
-		 {
-			 arr[++count] = v.first;
-		 }
+		 (*A)[++ptrindex] = val;
 	 }
-
-	 delete* A;
-	 *A = arr;
-
-
  }
 
 //Stat a; -вывести статистическую информацию о массиве а : размер массива,
@@ -397,6 +397,8 @@ void Arrays::Save(int* A, std::string path)
 //элементов от среднего значения.
  void Arrays::Stat(int *A)
  {
+	 Arrays::Print(A);
+
 	 if (A == nullptr)
 	 {
 		 throw logic_error("Null ptr exception");
