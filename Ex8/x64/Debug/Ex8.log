@@ -1,7 +1,0 @@
-﻿  Expression.cpp
-C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex8\Expression.h(22,3): warning C4091: 'typedef ': ignored on left of 'Expression::variable' when no variable is declared
-  (compiling source file 'Expression.cpp')
-  
-C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex8\Expression.cpp(90,34): warning C4101: 'e': unreferenced local variable
-C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex8\Expression.cpp(203,33): warning C4101: 'ex': unreferenced local variable
-  Ex8.vcxproj -> C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\x64\Debug\Ex8.exe
