@@ -1,0 +1,20 @@
+﻿  Person.cpp
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(116,31): warning C4244: '+=': conversion from 'double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(129,31): warning C4244: '+=': conversion from 'double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(143,16): warning C4244: '*=': conversion from 'const double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(157,16): warning C4244: '*=': conversion from 'const double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(171,16): warning C4244: '*=': conversion from 'const double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(184,31): warning C4244: '+=': conversion from 'double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(197,31): warning C4244: '+=': conversion from 'double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(210,31): warning C4244: '+=': conversion from 'double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(218,32): warning C4244: 'initializing': conversion from 'double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(219,28): warning C4244: 'initializing': conversion from 'double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(220,29): warning C4244: 'initializing': conversion from 'double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(240,20): warning C4244: 'initializing': conversion from 'double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(242,21): warning C4244: 'initializing': conversion from 'double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(273,20): warning C4244: 'initializing': conversion from 'double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(275,21): warning C4244: 'initializing': conversion from 'double' to 'size_t', possible loss of data
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(284,24): warning C4101: 'error_message': unreferenced local variable
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(106,1): warning C4715: 'Person::getMainPerk': not all control paths return a value
+C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\Ex3\Person.cpp(85,1): warning C4715: 'Person::getMainPerkValue': not all control paths return a value
+  Ex3.vcxproj -> C:\Users\lifem\iCloudDrive\Documents\Учеба\Языки и методы\Курсовая работа\CourseWork\x64\Debug\Ex3.exe
